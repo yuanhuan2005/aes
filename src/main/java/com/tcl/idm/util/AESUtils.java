@@ -15,8 +15,6 @@ import javax.crypto.spec.SecretKeySpec;
  */
 public class AESUtils
 {
-	//	final private static String PASSWORD = "G34DF_sd*&G^&Vhf897HK@$JHui32";
-
 	final private static String SECURE_RANDOM_KEY = "SHA1PRNG";
 
 	/**
