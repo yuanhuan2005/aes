@@ -51,46 +51,56 @@ public class AESMain
 	 */
 	public static void main(String[] args)
 	{
-		// 参数至少有一个
-		if (null == args || args.length != 4 || !"-k".equals(args[0]))
-		{
-			AESMain.printUsage();
-			System.exit(1);
-		}
-
-		String secureKey = args[1];
-		boolean encryptFlag = false;
-		String str = "";
-		if ("-e".equals(args[2]))
-		{
-			encryptFlag = true;
-			str = args[3];
-		}
-		else if ("-d".equals(args[2]))
-		{
-			encryptFlag = false;
-			str = args[3];
-		}
-		else
-		{
-			AESMain.printUsage();
-			System.exit(1);
-		}
-
 		try
 		{
-			if (encryptFlag)
+			// 参数至少有一个
+			if (null == args || args.length != 4 || !"-k".equals(args[0]))
 			{
-				System.out.println(AESUtils.encrypt(secureKey, str));
+				AESMain.printUsage();
+				System.exit(1);
+			}
+
+			String secureKey = args[1];
+			boolean encryptFlag = false;
+			String str = "";
+			if ("-e".equals(args[2]))
+			{
+				encryptFlag = true;
+				str = args[3];
+			}
+			else if ("-d".equals(args[2]))
+			{
+				encryptFlag = false;
+				str = args[3];
 			}
 			else
 			{
-				System.out.println(AESUtils.decrypt(secureKey, str));
+				AESMain.printUsage();
+				System.exit(1);
+			}
+
+			if (encryptFlag)
+			{
+				String encryptStr = AESUtils.encrypt(secureKey, str);
+				if (null == encryptStr)
+				{
+					System.exit(2);
+				}
+				System.out.println(encryptStr);
+			}
+			else
+			{
+				String decryptStr = AESUtils.decrypt(secureKey, str);
+				if (null == decryptStr)
+				{
+					System.exit(2);
+				}
+				System.out.println(decryptStr);
 			}
 		}
 		catch (Exception e)
 		{
-			System.out.println(e.toString());
+			e.printStackTrace();
 			System.exit(2);
 		}
 
