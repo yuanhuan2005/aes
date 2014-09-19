@@ -1,6 +1,6 @@
-package com.tcl.aes.main;
+package com.aes.main;
 
-import com.tcl.aes.util.AESUtils;
+import com.aes.util.AESUtils;
 
 /**
  * AES CLI Main function

@@ -1,4 +1,4 @@
-package com.tcl.aes.util;
+package com.aes.util;
 
 import java.security.SecureRandom;
 
