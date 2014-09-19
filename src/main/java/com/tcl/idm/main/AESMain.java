@@ -39,7 +39,7 @@ public class AESMain
 		usageStringBuilder.append("    Yuan Huan\n");
 		usageStringBuilder.append("\n");
 		usageStringBuilder.append("Bug report: \n");
-		usageStringBuilder.append("    yuanhuan@tcl.com");
+		usageStringBuilder.append("    yuanhuan_2005@126.com");
 
 		System.out.println(usageStringBuilder.toString());
 	}
