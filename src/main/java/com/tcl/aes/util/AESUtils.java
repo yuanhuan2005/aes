@@ -1,4 +1,4 @@
-package com.tcl.idm.util;
+package com.tcl.aes.util;
 
 import java.security.SecureRandom;
 
