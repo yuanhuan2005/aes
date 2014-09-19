@@ -3,7 +3,7 @@ AES CLI
 
 AES encryption and decryption command line tool.
 
-See src/main/webapp/WEB-INF/bin/aes.sh for Linux OS and aes.bat for Windows OS.
+You will see aes.sh for Linux OS and aes.bat for Windows OS under src/main/webapp/WEB-INF/bin/.
 
 
 Usage:
